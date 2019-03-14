@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd">
+
+
+    <!-- 配置处理器映射器
+        <bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"></bean>
+        &lt;!&ndash;映射器2&ndash;&gt;
+        <bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+            <property name="mappings">
+                <props>
+                    <prop key="/controller2.do">controller</prop>
+                    <prop key="/controller3.do">controller2</prop>
+                </props>
+            </property>
+        </bean>
+        &lt;!&ndash;配置处理器适配器&ndash;&gt;
+        <bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter"></bean>
+        &lt;!&ndash;适配器2&ndash;&gt;
+        <bean class="org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter"></bean>-->
+    <!--配置处理器-->
+    <!-- <bean id="controller" name="/controller.do" class="com.huayu.mvc.UserController"></bean>
+     <bean id="controller2" class="com.huayu.mvc.UserController2"></bean>-->
+    <!--&lt;!&ndash;视图解析器&ndash;&gt;
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"></bean>-->
+    <!--注解的映射器-->
+    <!--<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping"></bean>-->
+    <!--注解的适配器-->
+    <!--<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter"></bean>-->
+
+    <!--开启注解扫描-->
+    <mvc:annotation-driven></mvc:annotation-driven>
+    <context:component-scan base-package="com.huayu"></context:component-scan>
+
+</beans>
+
