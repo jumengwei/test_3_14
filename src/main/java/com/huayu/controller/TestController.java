@@ -16,6 +16,7 @@ public class TestController {
     @RequestMapping("/aaa.do")
     public ModelAndView aaa(){
        ModelAndView modelAndView = new ModelAndView();
+       System.out.println("哈哈哈");
        modelAndView.setViewName("/list.html");
        return modelAndView;
     }
